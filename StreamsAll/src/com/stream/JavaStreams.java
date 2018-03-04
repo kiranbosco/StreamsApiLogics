@@ -67,6 +67,20 @@ public class JavaStreams {
 		.forEach(x->System.out.println(x));*/
 		
 		
+		//flat Map example
+
+		List<String>list=Arrays.asList("kiran","vijay");
+		list.stream()
+		.map(String ::toUpperCase)
+		.sorted()
+		.forEach(System.out::println);
+
+		System.out.println("==========Flat map================== ");
+
+		Function<String, String>fun=s->s + " sister  sujatha ";
+		list.stream()
+		.map(fun)
+		.forEach(System.out::println);
 		
 		
 		
